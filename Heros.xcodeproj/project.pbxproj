@@ -3,10 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		91D0BEA3412CA627F1626E5B /* Pods_Heros.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 059519BCA119D49DCD1CD7F3 /* Pods_Heros.framework */; };
+		AB24D47A249122F80055153C /* ApiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB24D479249122F80055153C /* ApiModel.swift */; };
+		AB24D47C2491231A0055153C /* ApiController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB24D47B2491231A0055153C /* ApiController.swift */; };
+		AB68950D24919BA800A3D827 /* MarvelClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB68950C24919BA700A3D827 /* MarvelClass.swift */; };
+		AB68950F2491A34800A3D827 /* HerosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB68950E2491A34800A3D827 /* HerosTableViewController.swift */; };
 		ABFBE008248B00F6006D8A90 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABFBE007248B00F6006D8A90 /* AppDelegate.swift */; };
 		ABFBE00A248B00F6006D8A90 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABFBE009248B00F6006D8A90 /* SceneDelegate.swift */; };
 		ABFBE00C248B00F6006D8A90 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABFBE00B248B00F6006D8A90 /* ViewController.swift */; };
@@ -16,6 +21,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		059519BCA119D49DCD1CD7F3 /* Pods_Heros.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Heros.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0823D3CD4A29E4440D939C68 /* Pods-Heros.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Heros.debug.xcconfig"; path = "Target Support Files/Pods-Heros/Pods-Heros.debug.xcconfig"; sourceTree = "<group>"; };
+		AB24D479249122F80055153C /* ApiModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiModel.swift; sourceTree = "<group>"; };
+		AB24D47B2491231A0055153C /* ApiController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiController.swift; sourceTree = "<group>"; };
+		AB68950C24919BA700A3D827 /* MarvelClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarvelClass.swift; sourceTree = "<group>"; };
+		AB68950E2491A34800A3D827 /* HerosTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HerosTableViewController.swift; sourceTree = "<group>"; };
+		AB6895102491A7C500A3D827 /* Heros-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Heros-Bridging-Header.h"; sourceTree = "<group>"; };
 		ABFBE004248B00F6006D8A90 /* Heros.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Heros.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABFBE007248B00F6006D8A90 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ABFBE009248B00F6006D8A90 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +36,7 @@
 		ABFBE010248B00F7006D8A90 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ABFBE013248B00F7006D8A90 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ABFBE015248B00F7006D8A90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DD53C46557704D16594605B7 /* Pods-Heros.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Heros.release.xcconfig"; path = "Target Support Files/Pods-Heros/Pods-Heros.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +44,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91D0BEA3412CA627F1626E5B /* Pods_Heros.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		52F344FD510F746B0C890E80 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0823D3CD4A29E4440D939C68 /* Pods-Heros.debug.xcconfig */,
+				DD53C46557704D16594605B7 /* Pods-Heros.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		ABFBDFFB248B00F6006D8A90 = {
 			isa = PBXGroup;
 			children = (
 				ABFBE006248B00F6006D8A90 /* Heros */,
 				ABFBE005248B00F6006D8A90 /* Products */,
+				52F344FD510F746B0C890E80 /* Pods */,
+				BC03CA3994393E5FE759B3DD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +81,28 @@
 		ABFBE006248B00F6006D8A90 /* Heros */ = {
 			isa = PBXGroup;
 			children = (
+				AB68950C24919BA700A3D827 /* MarvelClass.swift */,
 				ABFBE007248B00F6006D8A90 /* AppDelegate.swift */,
+				AB6895102491A7C500A3D827 /* Heros-Bridging-Header.h */,
 				ABFBE009248B00F6006D8A90 /* SceneDelegate.swift */,
 				ABFBE00B248B00F6006D8A90 /* ViewController.swift */,
 				ABFBE00D248B00F6006D8A90 /* Main.storyboard */,
 				ABFBE010248B00F7006D8A90 /* Assets.xcassets */,
 				ABFBE012248B00F7006D8A90 /* LaunchScreen.storyboard */,
 				ABFBE015248B00F7006D8A90 /* Info.plist */,
+				AB24D479249122F80055153C /* ApiModel.swift */,
+				AB24D47B2491231A0055153C /* ApiController.swift */,
+				AB68950E2491A34800A3D827 /* HerosTableViewController.swift */,
 			);
 			path = Heros;
+			sourceTree = "<group>";
+		};
+		BC03CA3994393E5FE759B3DD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				059519BCA119D49DCD1CD7F3 /* Pods_Heros.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +112,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ABFBE018248B00F7006D8A90 /* Build configuration list for PBXNativeTarget "Heros" */;
 			buildPhases = (
+				F30F997289CAAB0F13D80D5C /* [CP] Check Pods Manifest.lock */,
 				ABFBE000248B00F6006D8A90 /* Sources */,
 				ABFBE001248B00F6006D8A90 /* Frameworks */,
 				ABFBE002248B00F6006D8A90 /* Resources */,
+				C1899B74D6C26BF97A2B6469 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -99,6 +139,7 @@
 				TargetAttributes = {
 					ABFBE003248B00F6006D8A90 = {
 						CreatedOnToolsVersion = 11.5;
+						LastSwiftMigration = 1150;
 					};
 				};
 			};
@@ -133,13 +174,59 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		C1899B74D6C26BF97A2B6469 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Heros/Pods-Heros-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Heros/Pods-Heros-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Heros/Pods-Heros-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F30F997289CAAB0F13D80D5C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Heros-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		ABFBE000248B00F6006D8A90 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB68950F2491A34800A3D827 /* HerosTableViewController.swift in Sources */,
+				AB24D47A249122F80055153C /* ApiModel.swift in Sources */,
 				ABFBE00C248B00F6006D8A90 /* ViewController.swift in Sources */,
+				AB24D47C2491231A0055153C /* ApiController.swift in Sources */,
 				ABFBE008248B00F6006D8A90 /* AppDelegate.swift in Sources */,
+				AB68950D24919BA800A3D827 /* MarvelClass.swift in Sources */,
 				ABFBE00A248B00F6006D8A90 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -282,8 +369,10 @@
 		};
 		ABFBE019248B00F7006D8A90 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0823D3CD4A29E4440D939C68 /* Pods-Heros.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = D9D6JL4SD7;
 				INFOPLIST_FILE = Heros/Info.plist;
@@ -293,6 +382,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.marcelo.Heros;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Heros/Heros-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -300,8 +391,10 @@
 		};
 		ABFBE01A248B00F7006D8A90 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DD53C46557704D16594605B7 /* Pods-Heros.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = D9D6JL4SD7;
 				INFOPLIST_FILE = Heros/Info.plist;
@@ -311,6 +404,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.marcelo.Heros;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Heros/Heros-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

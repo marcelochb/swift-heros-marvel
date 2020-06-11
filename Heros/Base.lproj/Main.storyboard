@@ -43,7 +43,7 @@
                                     <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 </state>
                                 <connections>
-                                    <action selector="btBuscar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nbd-Ys-8NH"/>
+                                    <segue destination="9tR-P7-aaU" kind="show" id="7YM-Jn-We6"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -73,10 +73,10 @@
             </objects>
             <point key="canvasLocation" x="695.6521739130435" y="198.88392857142856"/>
         </scene>
-        <!--Root View Controller-->
+        <!--Heros Marvel-->
         <scene sceneID="YkP-6t-jF8">
             <objects>
-                <tableViewController id="9tR-P7-aaU" sceneMemberID="viewController">
+                <tableViewController id="9tR-P7-aaU" customClass="HerosTableViewController" customModule="Heros" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="6Db-Pd-zJa">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -96,10 +96,9 @@
                             <outlet property="delegate" destination="9tR-P7-aaU" id="zUx-lf-KIL"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="1tL-rA-FD9"/>
+                    <navigationItem key="navigationItem" title="Heros Marvel" largeTitleDisplayMode="never" id="1tL-rA-FD9"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <size key="freeformSize" width="414" height="896"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ep4-8r-fyQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

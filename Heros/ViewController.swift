@@ -8,18 +8,32 @@
 
 import UIKit
 
-class ViewController: UIViewController {
 
+class ViewController: UIViewController {
+    
     @IBOutlet weak var tfHeroi: UITextField!
+    var apiMarvel = ApiController()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+ 
     }
-
-    @IBAction func btBuscar(_ sender: Any) {
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: true)
     }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        tfHeroi.resignFirstResponder()
+        
+        let vc = segue.destination as! HerosTableViewController
+        
+        vc.name = tfHeroi.text
+    }
+     
     
 }
 
