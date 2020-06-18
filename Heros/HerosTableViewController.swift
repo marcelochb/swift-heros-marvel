@@ -11,22 +11,39 @@ import UIKit
 class HerosTableViewController: UITableViewController {
     
     var name: String?
+    let apiMarvelClass = ApiController();
+    var apiMarvelData : MArvelInfo?
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
+        
+        ApiController.getData(name: name, page: 1) { response in
+                   if let teste = response?.data {
+                       print(teste)
+                   }
+               }
     }
 
     // MARK: - Table view data source
+    
+    func teste () {
+        ApiController.getData(name: name, page: 1) { apiMarvelData in
+                if let teste = apiMarvelData?.data {
+                    print(teste)
+                }
+            }
+    }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -34,15 +51,15 @@ class HerosTableViewController: UITableViewController {
         return 0
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
 
         // Configure the cell...
 
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.

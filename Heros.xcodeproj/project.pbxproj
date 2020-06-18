@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		91D0BEA3412CA627F1626E5B /* Pods_Heros.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 059519BCA119D49DCD1CD7F3 /* Pods_Heros.framework */; };
-		AB24D47A249122F80055153C /* ApiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB24D479249122F80055153C /* ApiModel.swift */; };
 		AB24D47C2491231A0055153C /* ApiController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB24D47B2491231A0055153C /* ApiController.swift */; };
 		AB68950D24919BA800A3D827 /* MarvelClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB68950C24919BA700A3D827 /* MarvelClass.swift */; };
 		AB68950F2491A34800A3D827 /* HerosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB68950E2491A34800A3D827 /* HerosTableViewController.swift */; };
@@ -23,7 +22,6 @@
 /* Begin PBXFileReference section */
 		059519BCA119D49DCD1CD7F3 /* Pods_Heros.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Heros.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0823D3CD4A29E4440D939C68 /* Pods-Heros.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Heros.debug.xcconfig"; path = "Target Support Files/Pods-Heros/Pods-Heros.debug.xcconfig"; sourceTree = "<group>"; };
-		AB24D479249122F80055153C /* ApiModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiModel.swift; sourceTree = "<group>"; };
 		AB24D47B2491231A0055153C /* ApiController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiController.swift; sourceTree = "<group>"; };
 		AB68950C24919BA700A3D827 /* MarvelClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarvelClass.swift; sourceTree = "<group>"; };
 		AB68950E2491A34800A3D827 /* HerosTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HerosTableViewController.swift; sourceTree = "<group>"; };
@@ -90,7 +88,6 @@
 				ABFBE010248B00F7006D8A90 /* Assets.xcassets */,
 				ABFBE012248B00F7006D8A90 /* LaunchScreen.storyboard */,
 				ABFBE015248B00F7006D8A90 /* Info.plist */,
-				AB24D479249122F80055153C /* ApiModel.swift */,
 				AB24D47B2491231A0055153C /* ApiController.swift */,
 				AB68950E2491A34800A3D827 /* HerosTableViewController.swift */,
 			);
@@ -222,7 +219,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				AB68950F2491A34800A3D827 /* HerosTableViewController.swift in Sources */,
-				AB24D47A249122F80055153C /* ApiModel.swift in Sources */,
 				ABFBE00C248B00F6006D8A90 /* ViewController.swift in Sources */,
 				AB24D47C2491231A0055153C /* ApiController.swift in Sources */,
 				ABFBE008248B00F6006D8A90 /* AppDelegate.swift in Sources */,

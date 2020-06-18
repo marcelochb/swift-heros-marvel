@@ -23,13 +23,13 @@ class ApiController: UIViewController {
                 let offset = page * limit
         let startsWith: String
         if let name = name, !name.isEmpty {
-            startsWith = "nameStartsWith=\(name.replacingOccurrences(of: " ",with: ""))&"
+            startsWith = "titleStartsWith=\(name.replacingOccurrences(of: " ",with: ""))&"
         } else {
             startsWith =  ""
         }
 
-        let url = basePath + "offset=\(offset)&limit\(limit)&" + startsWith + getCredencials()
-     
+        let url = basePath + "offset=\(offset)&limit=\(limit)&" + startsWith + getCredencials()
+      
         AF.request(url).responseJSON { response in
             guard let data = response.data else {
                 onComplete(nil)
