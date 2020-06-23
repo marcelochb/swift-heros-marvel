@@ -14,7 +14,7 @@ import SwiftHash
 
 class ApiController: UIViewController {
     
-    static private let basePath = "http://gateway.marvel.com/v1/public/comics?"
+    static private let basePath = "https://gateway.marvel.com/v1/public/characters?"
     static private let privateKey = "2941ebac384b5f5005040c1f61ee1978903c6987"
     static private let publicKey = "4b6411507aa8343c65b92f4239ae0d1a"
     static private let limit = 50
@@ -23,7 +23,7 @@ class ApiController: UIViewController {
                 let offset = page * limit
         let startsWith: String
         if let name = name, !name.isEmpty {
-            startsWith = "titleStartsWith=\(name.replacingOccurrences(of: " ",with: ""))&"
+            startsWith = "nameStartsWith=\(name.replacingOccurrences(of: " ",with: ""))&"
         } else {
             startsWith =  ""
         }
@@ -40,6 +40,7 @@ class ApiController: UIViewController {
                 onComplete(marvelInfo)
             } catch {
                 print(error.localizedDescription)
+                onComplete(nil)
             }
         }
     }

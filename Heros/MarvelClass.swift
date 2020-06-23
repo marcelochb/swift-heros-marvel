@@ -11,8 +11,8 @@ import Foundation
 struct MArvelInfo: Codable {
 	let code: Int
 	let status: String
-	let copyright, attributionText, attributionHTML: String?
-	let etag: String?
+//	let copyright, attributionText, attributionHTML: String?
+//	let etag: String?
 	let data: DataClass
 }
 

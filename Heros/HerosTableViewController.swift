@@ -11,53 +11,85 @@ import UIKit
 class HerosTableViewController: UITableViewController {
     
     var name: String?
-    let apiMarvelClass = ApiController();
-    var apiMarvelData : MArvelInfo?
+    let apiMarvelClass = ApiController()
+    var resultHeros: [Result] = []
+   var label: UILabel = {
+       let label = UILabel()
+       label.textAlignment = .center
+       label.textColor = .white
+       return label
+   }()
+    var loadingHeros = false
+    var totalHeros = 0
+        var currentPage = 0
     
 
-    override func viewDidLoad() {
+  override func viewDidLoad() {
         super.viewDidLoad()
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
-        
-        
-        ApiController.getData(name: name, page: 1) { response in
-                   if let teste = response?.data {
-                       print(teste)
-                   }
-               }
+        label.text = "Buscando Herois. Aguarde..."
+        loadHeros()
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let vc = segue.destination as! HeroViewController
+        
+        vc.hero = resultHeros[tableView.indexPathForSelectedRow!.row]
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: true)
+    }
+    
     // MARK: - Table view data source
     
-    func teste () {
-        ApiController.getData(name: name, page: 1) { apiMarvelData in
-                if let teste = apiMarvelData?.data {
-                    print(teste)
+    func loadHeros () {
+        loadingHeros = true
+        ApiController.getData(name: name, page: currentPage) { (apiMarvelData) in
+                if let apiMarvelData = apiMarvelData {
+                    self.resultHeros += apiMarvelData.data.results
+                    self.totalHeros = apiMarvelData.data.total
+                    print("total:", self.totalHeros, "- Já incluidos:", self.resultHeros.count)
+                    print(self.resultHeros)
+                    DispatchQueue.main.async {
+                        self.loadingHeros = false
+                        self.tableView.reloadData()
+                    }
                 }
             }
     }
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 1
-    }
+//    override func numberOfSections(in tableView: UITableView) -> Int {
+//        // #warning Incomplete implementation, return the number of sections
+//        return 1
+//    }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        
+        tableView.backgroundView = resultHeros.count == 0 ? label : nil
+        return resultHeros.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! HeroTableViewCell
+        
+        let hero = resultHeros[indexPath.row]
+        
+        cell.prepereCell(with: hero)
 
         // Configure the cell...
 
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if indexPath.row == resultHeros.count - 10 && !loadingHeros && resultHeros.count != totalHeros {
+            currentPage += 1
+            loadHeros()
+            print("carregando herois")
+        }
     }
     
 

@@ -8,7 +8,8 @@ target 'Heros' do
   # Pods for Heros
 
 	pod 'Alamofire', '~> 5.2'
-  	pod 'SDWebImageSwiftUI'
+  pod 'SDWebImageSwiftUI'
 	pod 'SwiftHash'
+  pod 'Kingfisher'
   
 end
